@@ -27,8 +27,7 @@ public class gameCenterStr {
     public String BUTTON_NEXT = ":id/button_next";//相机-下一步
     public String VIDEO_PREVIEW_COMMIT_IV = ":id/video_preview_commit_iv";//相机-视频预览-确认
     public String M4399_TOPIC_PUBLISH = ":id/m4399_topic_publish";//动态编辑页-发布按钮
-    public String ZONE_EDIT = ":id/zone_edit";//动态输入框呀
-    public String ZONE_EDIT1 = ":id/zone_edit";//动态输入框呀
+    public String ZONE_EDIT = ":id/zone_edit";//动态输入框
 
 
 
