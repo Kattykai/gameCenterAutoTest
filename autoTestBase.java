@@ -5,6 +5,7 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 import android.support.test.uiautomator.By;
 import android.support.test.uiautomator.UiDevice;
+import android.support.test.uiautomator.UiObject2;
 import android.support.test.uiautomator.UiObjectNotFoundException;
 import android.support.test.uiautomator.UiScrollable;
 import android.support.test.uiautomator.UiSelector;
@@ -31,10 +32,13 @@ public class autoTestBase extends gameCenterStr{
         uiScrollable.scrollIntoView(new UiSelector().resourceId(resID));
     }
     //注册监听器
-    public void errorHandleAdd(){
-        device.registerWatcher("Permission", new UiWatcher() {
+    public void errorHandleAdd(String name_resgister, final String res_register){
+        device.registerWatcher(name_resgister, new UiWatcher() {
             @Override
             public boolean checkForCondition() {
+                if (device.hasObject(By.res(res_register))){
+                    device.findObject(By.res(res_register)).click();
+                }
                 return false;
             }
         });

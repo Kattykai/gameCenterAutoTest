@@ -12,21 +12,14 @@ import org.junit.Test;
 import java.io.IOException;
 
 public class gameCenterPageClick extends autoTestBase{
-    public void errorHandle(){
-
-    }
     //resourceID配置
     //非插件版本：com.m4399.gamecenter
     //主插件版本：com.m4399.gamecenter.plugin.main
     public String index = "com.m4399.gamecenter";
     @Test
-    public void myPage() throws IOException, InterruptedException {
-        restartApp();
-
-    }
-    @Test
     public void homePage() throws IOException, InterruptedException {
         restartApp();
+        errorHandleAdd("perssionAllow","com.m4399.gamecenter:id/btn_dialog_horizontal_left");
         UiObject2 gameSearch = device.findObject(By.res(index+RL_GAME_SEARCH));
         gameSearch.click();
         device.wait(Until.findObject(By.res(index+IB_QR_SCAN)),5000);
