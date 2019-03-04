@@ -1,0 +1,2 @@
+# gameCenterAutoTest
+gameCenterAutoTest
